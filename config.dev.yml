@@ -1,0 +1,7 @@
+# コンテンツ設定
+content : 
+  ## title
+  title: "title ( set from yaml )"
+  ## metaタグ設定
+  meta:
+    description: "description ( set from yaml )"
