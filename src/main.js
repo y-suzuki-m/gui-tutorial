@@ -6,10 +6,18 @@ import { loadFonts } from './plugins/webfontloader'
 // axiosのインポート
 import api  from './plugins/api.js'
 
-loadFonts()
+import { store } from './store/index.js'
 
-createApp(App)
-  .use(vuetify)
-  // appに反映
-  .use(api)
-  .mount('#app')
+loadFonts()
+;(async ()=>{
+
+  // Get session API
+  await api.getSession()
+
+  createApp(App)
+    .use(store)
+    .use(vuetify)
+    // appに反映
+    .use(api)
+    .mount('#app')
+})();

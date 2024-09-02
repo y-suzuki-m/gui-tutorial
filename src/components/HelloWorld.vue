@@ -45,11 +45,7 @@ export default {
   }),
   methods: {
     getHealthCheck: function () {
-      this.$api.get("https://geoapi.heartrails.com/api/json", {
-        params: {
-          method: "getPrefectures",
-          area: "関東"
-        }
+      this.$api.get("/healthcheck/ref/versions", {
       })
         .then(response => {
           this.res_data = response.data
