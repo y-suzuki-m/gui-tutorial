@@ -1,7 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 
 const qmonus = require("./qmonus-dev.js")({
-  target   : "https://portal-fe354278-a197-48e7-a1db-abb340de9e59.sdk-lab.qmonus.net/v3#/",
+  target   : "https://portal-fe354278-a197-48e7-a1db-abb340de9e59.sdk-lab.qmonus.net/",
   username : "exampleUser",
   password : "example1234",
 })
